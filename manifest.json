@@ -14,9 +14,5 @@
       "matches": ["http://argenteam.net/"],
       "js": ["argenteamIMDBscore.js"]
     }
-  ],
-
-  "permissions": [
-      "<all_urls>"
   ]
 }
