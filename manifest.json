@@ -17,7 +17,6 @@
   ],
 
   "permissions": [
-      "<all_urls>",
-      "*://*.imdb.com/"
+      "<all_urls>"
   ]
 }

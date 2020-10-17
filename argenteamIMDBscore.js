@@ -1,19 +1,23 @@
-document.body.style.border = "5px solid blue";
-
 let entryTitles = document.querySelectorAll('.entry-title');
 
 for(let pos in entryTitles){
-    if(entryTitles[pos] === undefined) continue;
-    url = "https://www.imdb.com/find?s=tt&q=" + entryTitles[pos].innerText.replaceAll(' ', '%20') + "&ref_=nv_sr_sm";
+    if(entryTitles[pos].innerText === undefined) continue;
+    filmName = entryTitles[pos].innerText.split('(')[0].trim()
+    try {
+      year = entryTitles[pos].innerText.split('(')[1].replace(')', '')
+    } catch(err) {
+      continue
+    }
+    url = "http://www.omdbapi.com/?apikey=6d863fde&t=" + filmName + "&y=" + year;
     console.log(entryTitles[pos].innerText);
     console.log(url);
     fetch(url)
         .then(function(response) {
-            return response;
+            return response.json();
         })
         .then(function(data) {
-            //entryTitles[pos].innerHTML = data;
-            console.log(data);
+            if('Error' in data) return;
+            entryTitles[pos].innerHTML += ' ' + data['imdbRating'];
         })
         .catch(function(err) {
             console.error(err);
