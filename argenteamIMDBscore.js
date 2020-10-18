@@ -1,4 +1,4 @@
-let moviesInfo = document.querySelectorAll('.movie-info');
+var moviesInfo = document.querySelectorAll('.movie-info');
 
 for(let pos in moviesInfo){
     if(moviesInfo[pos].innerText === undefined) continue;
@@ -16,8 +16,22 @@ for(let pos in moviesInfo){
         })
         .then(function(data) {
             if('Error' in data) return;
-            imdbData = data['imdbRating'] + ' (' + data['imdbVotes'] + ') ' + data['Genre'] + ' ' + data['Runtime']
-            moviesInfo[pos]['childNodes'][3].prepend(imdbData)
+            imdbDataText = data['imdbRating'] + ' (' + data['imdbVotes'] + ') ' + data['Genre'] + ' ' + data['Runtime']
+            var imdbDataA = document.createElement('a');
+            imdbDataA.href = 'https://www.imdb.com/title/' + data['imdbID']
+            imdbDataA.innerHTML = imdbDataText
+            imdbDataA.style.background = 'url(https://icon-icons.com/icons2/2108/PNG/32/imdb_icon_130907.png)';
+            imdbDataA.style.backgroundRepeat = 'no-repeat';
+            imdbDataA.style.backgroundSize = '16px 16px';
+            imdbDataA.style.paddingTop = '0px';
+            imdbDataA.style.paddingRight = '6px';
+            imdbDataA.style.paddingBottom = '0px';
+            imdbDataA.style.paddingLeft = '20px';
+            imdbDataA.style.fontFamily = 'auto';
+            imdbDataA.style.fontWeight = 'bold';
+            imdbDataA.style.fontSize = 'inherit';
+            imdbDataA.style.color = 'rgb(214 162 0)';
+            moviesInfo[pos]['childNodes'][3].prepend(imdbDataA)
         })
         .catch(function(err) {
             console.error(moviesInfo[pos]);
