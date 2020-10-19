@@ -8,9 +8,13 @@ Extensión para Chrome, que agrega datos obtenidos de IMBd.com a la lista de pel
 
 # Instalación
 Con los archivos en su ordenador, abra [chrome://extensions/](chrome://extensions/) en Chrome, luego seleccione "Load unpacked"
+
 ![Load unpacked](Documentación/load_unpacked.png)
+
 Se abrirá un gestor de archivos en el cuál deberá seleccionar la carpeta contenedora de los archivos.
+
 ![Loaded](Documentación/loaded.png)
+
 ¡La extensión ya está lista!
 
 ## SOURCES
