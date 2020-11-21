@@ -11,8 +11,12 @@
 
   "content_scripts": [
     {
-      "matches": ["http://argenteam.net/"],
+      "matches": ["*://*.argenteam.net/"],
       "js": ["argenteamIMDBscore.js"]
     }
+  ],
+
+  "permissions": [
+    "*://*.omdbapi.com/?apikey=6d863fde&*"
   ]
 }

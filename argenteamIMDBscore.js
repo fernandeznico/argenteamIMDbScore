@@ -1,5 +1,7 @@
 var moviesInfo = document.querySelectorAll('.movie-info');
 
+var ICON_URL = "https://www.flaticon.es/svg/static/icons/svg/889/889118.svg"
+
 for(let pos in moviesInfo){
     if(moviesInfo[pos].innerText === undefined) continue;
     filmNameAndYear = moviesInfo[pos].innerText.split('\n')[0].trim()
@@ -20,7 +22,7 @@ for(let pos in moviesInfo){
             var imdbDataA = document.createElement('a');
             imdbDataA.href = 'https://www.imdb.com/title/' + data['imdbID']
             imdbDataA.innerHTML = imdbDataText
-            imdbDataA.style.background = 'url(https://icon-icons.com/icons2/2108/PNG/32/imdb_icon_130907.png)';
+            imdbDataA.style.background = 'url(' + ICON_URL + ')';
             imdbDataA.style.backgroundRepeat = 'no-repeat';
             imdbDataA.style.backgroundSize = '16px 16px';
             imdbDataA.style.paddingTop = '0px';
@@ -31,6 +33,7 @@ for(let pos in moviesInfo){
             imdbDataA.style.fontWeight = 'bold';
             imdbDataA.style.fontSize = 'inherit';
             imdbDataA.style.color = 'rgb(214 162 0)';
+            imdbDataA.style.whiteSpace = 'break-spaces';
             moviesInfo[pos]['childNodes'][3].prepend(imdbDataA)
         })
         .catch(function(err) {
