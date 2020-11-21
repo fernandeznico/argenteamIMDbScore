@@ -1,12 +1,13 @@
 
-# argenteam.net << IMDb.com | Chrome Extension
+# argenteam.net << IMDb.com | Chrome & Firefox Extension
 Extensión para Chrome, que agrega datos obtenidos de IMBd.com a la lista de películas en la página principal de argenteam.net
 
 ![Ejemplo.png](Documentación/Ejemplo.png)
 
 *La extensión no está publicada.*
 
-# Instalación
+## Chrome
+### Instalación
 Con los archivos en su ordenador, abra [chrome://extensions/](chrome://extensions/) en Chrome, luego seleccione "Load unpacked"
 
 ![Load unpacked](Documentación/load_unpacked.png)
