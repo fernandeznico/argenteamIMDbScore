@@ -11,7 +11,7 @@ for(let pos in moviesInfo){
     } catch(err) {
       continue
     }
-    url = "http://www.omdbapi.com/?apikey=6d863fde&t=" + filmName + "&y=" + year;
+    url = "https://www.omdbapi.com/?apikey=6d863fde&t=" + filmName + "&y=" + year;
     fetch(url)
         .then(function(response) {
             return response.json();
