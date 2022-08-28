@@ -1,7 +1,7 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "argenteamIMDBscore",
-  "version": "1.0",
+  "version": "1.1",
 
   "description": "Agrega el puntaje de la película en IMBD a la página princial de argenteam",
 
@@ -16,7 +16,7 @@
     }
   ],
 
-  "permissions": [
-    "*://*.omdbapi.com/?apikey=6d863fde&*"
+  "host_permissions": [
+    "https://omdbapi.com/"
   ]
 }
