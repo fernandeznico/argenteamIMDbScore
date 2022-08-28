@@ -21,10 +21,10 @@ for(let pos in moviesInfo){
             imdbDataA.className = 'imdb-link';
             imdbDataA.href = 'https://www.imdb.com/title/' + data['imdbID'];
             imdbDataA.innerHTML = imdbDataText;
-            moviesInfo[pos]['childNodes'][3].prepend(imdbDataA)
+            moviesInfo[pos].querySelector('.movie-links').prepend(imdbDataA);
         })
         .catch(function(err) {
-            console.error(moviesInfo[pos]);
+            console.error(moviesInfo[pos], err);
         });
 }
 
