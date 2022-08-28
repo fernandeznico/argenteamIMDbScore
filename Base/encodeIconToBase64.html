@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+<title>PNG > Base64</title>
+</head>
+<body>
+<p>
+    PNG:
+    <input id="fileInput" type="file" accept="image/png" oninput="onFileInput()">
+</p>
+<button id="encodeButton" onclick="onClick()" disabled="true">Base64</button>
+<div id="outputDiv" hidden="true">
+    <textarea id="outputTextArea" disabled rows="30" cols="80"></textarea>
+</div>
+<script>
+    async function onFileInput() {
+        document.getElementById("encodeButton").disabled = false;
+    }
+    async function onClick() {
+        document.getElementById("outputDiv").hidden = false;
+        const arrayBuffer = await document.getElementById("fileInput").files[0].arrayBuffer();
+        const base64String = btoa(new Uint8Array(arrayBuffer).reduce((data, byte) => data + String.fromCharCode(byte), ''));
+        document.getElementById("outputTextArea").value = base64String;
+    }
+</script>
+</body>
