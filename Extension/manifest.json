@@ -6,7 +6,10 @@
   "description": "Agrega el puntaje de la película en IMBD a la página princial de argenteam",
 
   "icons": {
-    "48": "IMDb_48.png"
+    "16": "images/AT_IMDb_16.png",
+    "32": "images/AT_IMDb_32.png",
+    "48": "images/AT_IMDb_48.png",
+    "128": "images/AT_IMDb_128.png"
   },
 
   "content_scripts": [
