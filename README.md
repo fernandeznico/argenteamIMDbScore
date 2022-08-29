@@ -12,7 +12,7 @@ Con los archivos en su ordenador, abra [chrome://extensions/](chrome://extension
 
 ![Load unpacked](Documentación/load_unpacked.png)
 
-Se abrirá un gestor de archivos en el cuál deberá seleccionar la carpeta contenedora de los archivos.
+Se abrirá un gestor de archivos en el cuál deberá seleccionar la carpeta 'Extension'.
 
 ![Loaded](Documentación/loaded.png)
 
